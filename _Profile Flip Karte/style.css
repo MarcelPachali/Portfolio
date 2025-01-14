@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #171616;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.ctn {
+    perspective: 2000px;
+    width: 400px;
+    height: 550px;
+}
+
+.ctn:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: transform 1500ms;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 11px;
+    backface-visibility: hidden;
+}
+
+.webentwickler {
+    color: white;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    height: 95%;
+}
+
+.front {
+    background-image: url(marcel-groß.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.back {
+    background-color: #282828;
+    padding: 12px;
+    transform: rotateY(180deg);
+}
+
+.circle-img {
+    background-image: url(marcel-klein.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 5px solid #eee;
+}
+
+.circle-img-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    color:#eee;
+    margin-top: 12px;
+}
+
+h2 {
+    color: #eee;
+}
+
+.line-ctn {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 24px;
+}
+
+.line-ctn span {
+    display: inline-block;
+    width: 100%;
+    height: 15px;
+    background-color: #eee;
+    border-radius: 2px;
+    position: relative;
+}
+
+.line-ctn span div {
+    position:absolute;
+    height: 100%;
+    background-color: red;
+}
+
+.fill-el--1 {
+    width: 75%;
+}
+
+.fill-el--2 {
+    width: 60%;
+}
+
+.fill-el--3 {
+    width: 55%;
+}
+
+.fill-el--4 {
+    width: 50%;
+}
+
+.fill-el--5 {
+    width: 65%;
+}
