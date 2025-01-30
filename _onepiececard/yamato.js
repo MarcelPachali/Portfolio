@@ -9,7 +9,7 @@ const kartenDatenbank = {
       lebenspunkte: 5,
       farbe: 'Gelb',
       region: 'Land von Wano',
-      beschreibung: "Don! x1 - Gegnerzug: Wenn du 2 oder weniger Lebenspunkte hast, erhält dieser Anführer +1000 Kraft.",
+      beschreibung: "Don! x1 - Gegners Zug: Wenn du 2 oder weniger Lebenspunkte hast, erhält dieser Anführer +1000 Kraft.",
       bild: 'bilder/yamato/yamato.jpg' // Beispielbildpfad, ersetze dies durch den tatsächlichen Pfad zu deinen Bildern
     },
     'ST09-002': {
@@ -45,7 +45,7 @@ const kartenDatenbank = {
       lebenspunkte: '?',
       farbe: 'Gelb',
       region: 'Die 4 Kaiser / Biest Königreich Piraten',
-      beschreibung: "DON!! x1 Wenn du 2 oder weniger Lebenskarten hast, kann dieser Charakter im Kampf nicht kampfunfähig gemacht werden.",
+      beschreibung: "DDON!! x1, wenn du 2 oder weniger Lebenskarten hast, kann dieser Charakter im Kampf nicht kampfunfähig gemacht werden.",
       bild: 'bilder/yamato/kaido.png' 
     },
     'ST09-005': {
@@ -57,7 +57,7 @@ const kartenDatenbank = {
       lebenspunkte: '?',
       farbe: 'Gelb',
       region: 'Land von Wano / Kouzuki Clan',
-      beschreibung: "DON!! x1 Dieser Charakter erhält Doppelangriff. (Diese Karte fügt 2 Schaden zu.) <br> Bei K.O. Du kannst 2 Karten aus deiner Hand ablegen: Füge bis zu 1 Karte von oben deines Decks zu den obersten Karten deines Lebens hinzu.",
+      beschreibung: "DON!! x1, dieser Charakter erhält Doppelangriff. (Diese Karte fügt 2 Schaden zu.) <br> Bei K.O. Du kannst 2 Karten aus Deiner Hand ablegen: Füge bis zu 1 Karte von oben Deines Decks zu den obersten Karten Deines Lebens hinzu.",
       bild: 'bilder/yamato/oden.jpg' 
     },
     // Weitere Karten können hier hinzugefügt werden
