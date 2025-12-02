@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt: Weingut</title>
+    <link rel="shortcut icon" href="images/icons/wein-icon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <!--<img src="" alt="">
+                https://www.weingut.de/
+                https://barrierefreies.design/werkzeuge/farbsehschwaeche-simulieren
+                -->
+                <p title="Logo des Weinguts">Projekt: Weingut</p>
+            </div>
+            <div class="navbar-center">
+                <a href="#home">Startseite</a>
+                <a href="#about-us">Über uns</a>
+                <a href="#sortiment">Sortiment</a>
+                <a href="#weingut">Weingüter</a>
+            </div>
+            <div class="navbar-right">
+                <!-- Modal Container -->
+                <div id="modal" class="modal" style="display:none;">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div id="modal-body"></div>
+                    </div>
+                </div>
+  
+                <!-- Trigger Buttons -->
+                <a onclick="openModal('kontakt')">Kontakt</a>
+                <a onclick="openModal('impressum')">Impressum</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Willkommen zum Weingut Projekt</h1>
+            <h2>Die ist ein Beispiel für eine Webseite für eine Weinkellnerei Branche</h2>
+            <p>Erleben Sie die Kunst des Weinguts: 
+            Inmitten malerischer Weinberge, in denen Tradition und Innovation harmonisch 
+            verschmelzen, entfaltet sich die Leidenschaft für edle Weine. 
+            Jede Rebe, jeder Jahrgang und jeder sorgfältige Handgriff steht als Versprechen 
+            von Qualität und authentischem Genuss. 
+            Tauchen Sie ein in eine faszinierende Welt, in der handwerkliche Präzision und 
+            die natürliche Schönheit der Reben zu unvergesslichen Geschmackserlebnissen 
+            verschmelzen.</p>
+        </section>
+
+        <section id="about-us">
+            <h2>Über uns</h2>
+            <p>Unser Weingut steht für eine langjährige Tradition und Leidenschaft im Weinbau. 
+            Durch die enge Zusammenarbeit mit zahlreichen Winzern und Kellereien gelingt es uns, 
+            eine vielfältige Auswahl an erlesenen Weinen zu kreieren. Jeder unserer Partner bringt sein 
+            individuelles Fachwissen und seine einzigartige Handschrift in den Weinbereitungsprozess ein, 
+            was zu einer beeindruckenden Bandbreite an Geschmacksnuancen führt. 
+            Gemeinsam teilen wir das Ziel, höchste Qualitätsstandards zu erfüllen und authentischen Weingenuss zu bieten. 
+            Diese Kooperation ermöglicht es uns, sowohl traditionelle als auch innovative Weinlinien zu entwickeln, 
+            die die Vielfalt unserer Weinregion widerspiegeln.</p>
+        </section>
+
+        <section id="sortiment">
+            <h2 class="card-h2">Unser Sortiment</h2>
+            <div class="card">
+                <div class="wein">
+                    <img src="images/arfanda_vinho_verde_doc.png" alt="Arfanda Vinho Verde Doc" loading="lazy">
+                </div>
+                <h3>Arfanda Vinho Verde Doc</h3>
+                <p>Die Trauben für unseren Arfanda wachsen im Norden Portugals.</p>
+            </div>
+            <div class="card">
+                <div class="wein">
+                    <img src="images/castillo_la_plata_tempranillo.png" alt="Castillo la Plata Tempranillo" loading="lazy">
+                </div>
+                <h3>Castillo la Plata Tempranillo</h3>
+                <p>Perfekter Genuss zum Träumen.</p>
+            </div>
+            <div class="card">
+                <div class="wein">
+                    <img src="images/michel_maury_cabernet.png" alt="Michel Maury Cabernet" loading="lazy">
+                </div>
+                <h3>Michel Maury Cabernet</h3>
+                <p>Jugendlich, frisch und von außergewöhnlicher Qualität.</p>
+            </div>
+        </section>
+
+        <section class="versand">
+            <div class="ver-column">
+                <div class="img">
+                    <img src="images/icons/wein.webp" alt="Wein" loading="lazy">
+                </div>
+                <h3>Ausgezeichnete Qualität</h3>
+                <p>Sehr gute Bewertung für unsere Weine.</p>
+            </div>
+            <div class="ver-column">
+                <div class="img">
+                    <img src="images/icons/wein-versand.jpg" alt="Wein Versand" loading="lazy">
+                </div>
+                <h3>Versandkostenfrei</h3>
+                <p>Ab einen Bestellwert von 125 € liefern wird Versandkostenfrei.</p>
+            </div>
+            <div class="ver-column">
+                <div class="img">
+                    <img src="images/icons/lieferung.jpg" alt="Lieferung" loading="lazy">
+                </div>
+                <h3>Schnelle Lieferung</h3>
+                <p>Wir liefer den Wein mit DHL zu Ihnen nach Hause!</p>
+            </div>
+            <div class="ver-column">
+                <div class="img">
+                    <img src="images/icons/zufriedenheitsgarantie.jpg" alt="Zufriedenheitsgarantie" loading="lazy">
+                </div>
+                <h3>Zufriedenheitsgarantie</h3>
+                <p>Schmeckt Ihnen ein Wein nicht, holen wir ihn wieder ab. Kostenlos!</p>
+            </div>
+        </section>
+
+        <section id="weingut">
+            <div class="weingut-art">
+                <h2>Unser Weingut</h2>
+                <p>Willkommen auf unserem Weingut! Hier vereinen sich Tradition und moderne Techniken, um exzellente Weine zu kreieren.
+                    Unsere Weinberge erstrecken sich über malerische Landschaften und bieten beste Bedingungen für den Anbau erlesener Rebsorten.</p>
+            </div>
+            <div class="weingut-img">
+                <img src="images/Weingut-Platzhalter.jpg" alt="Weingut von KI generiert">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-column"> <!-- footer-logo -->
+            <h4>Weingut Service</h4>
+            <a href="#">AGB</a>
+            <a href="#">Datenschutz</a>
+            <a href="#">Widerrufsrecht</a>
+            <a onclick="openModal('impressum')">Impressum</a>
+            <a href="#">Zahlung</a>
+            <a href="#">Bestellvorgang</a>
+            <a href="#">Lieferung</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Treuepunkte Programm</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Weinwissen</h4>
+            <a href="#">Goumetsystem</a>
+            <a href="#">Philosophie</a>
+            <a href="#">Wein ABC</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Unser Winzer</h4>
+            <a href="https://www.weingut-proschwitz.de/">Schloss Proschwitz</a>
+            <a href="https://www.leipzig.de/freizeit-kultur-und-tourismus/einkaufen-und-ausgehen/maerkte/weinfest/projekt/der-winzer-weingut-keth">Weingut Keth</a>
+            <a href="https://weinhaus-vogler.de/">Weinhaus Vogler</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Deine E-Mail" required>
+                <button type="submit">Abonnieren</button>
+            </form>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright &copy; 2025 Musterfirma. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Newsletter Popup -->
+  <div id="newsletter">
+    <span class="close" onclick="closeNewsletter()">x</span>
+    <h3>Newsletter</h3>
+    <p>Abonniere unseren Newsletter und bleibe immer informiert.</p>
+    <form>
+      <input type="email" placeholder="Deine E-Mail" required>
+      <button type="submit">Abonnieren</button>
+    </form>
+  </div>
+
+    <script src="js/cursor.js"></script>
+</body>
+</html>

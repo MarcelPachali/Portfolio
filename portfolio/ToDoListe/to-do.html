@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderne To-Do-Liste</title>
+    <link rel="shortcut icon" href="../../images/MPIcon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 To-Do-Liste</h1>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number" id="activeCount">0</div>
+                <div class="stat-label">Aktiv</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="completedCount">0</div>
+                <div class="stat-label">Erledigt</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="archivedCount">0</div>
+                <div class="stat-label">Archiviert</div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" class="todo-input" id="todoInput" placeholder="Neue Aufgabe hinzufügen...">
+            <button class="add-btn" id="addButton">Hinzufügen</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="active">Aktive Aufgaben</button>
+            <button class="tab" data-tab="completed">Erledigte Aufgaben</button>
+            <button class="tab" data-tab="archived">Archivierte Aufgaben</button>
+        </div>
+
+        <div class="todo-list" id="todoList">
+            <div class="empty-state">Keine Aufgaben vorhanden. Füge deine erste Aufgabe hinzu!</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

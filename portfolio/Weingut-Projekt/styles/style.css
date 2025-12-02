@@ -1,0 +1,456 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #4b0000;
+  color: #C8B568;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(200, 181, 104, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+}
+
+header {
+  background-color: #2a0000;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #2a0000;
+}
+.navbar .navbar-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar .navbar-left img {
+  max-height: 50px;
+}
+.navbar .navbar-center {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.navbar .navbar-right {
+  display: flex;
+  gap: 30px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #C8B568;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #F5F5DC;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #4b0000;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.modal-p, address {
+  margin-bottom: 15px;
+}
+
+main {
+  margin: 15px;
+}
+main section {
+  margin-bottom: 15px;
+}
+main section h1 {
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+}
+main section h2 {
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main section p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#sortiment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#sortiment .card-h2 {
+  display: block;
+  width: 100%;
+}
+#sortiment .card {
+  display: block;
+  background-color: #F5F5DC;
+  width: 250px;
+  height: 525px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+#sortiment .card .wein {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+#sortiment .card:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 8px 10px #C8B568;
+}
+
+.versand {
+  background-color: white;
+  color: #C8B568;
+  width: 100%;
+  height: 200px;
+  padding: 0;
+  display: flex;
+}
+.versand .ver-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+.versand .ver-column h3 {
+  font-size: 18px;
+  text-align: center;
+  margin: 5px;
+}
+.versand .ver-column p {
+  font-size: 15px;
+  margin: 15px;
+}
+.versand .ver-column .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weingut {
+  display: flex;
+  align-items: center;
+}
+#weingut img {
+  width: 250px;
+  height: auto;
+}
+#weingut img:hover {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.weingut-img {
+  width: 30%;
+  text-align: center;
+}
+
+.weingut-art {
+  width: 70%;
+  padding: 20px;
+}
+
+/* Container für das Popup */
+#newsletter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  padding: 15px;
+  background: #4b0000; /* Hintergrundfarbe */
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  color: #C8B568; /* Schriftfarbe */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Animation: Box gleitet nach unten und wird transparent */
+.slideOut {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Stil für den Schließ-Button */
+.close {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+  color: #C8B568;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Formular-Stile anpassen */
+form input[type=email] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 8px 12px;
+  background-color: #C8B568;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #4b0000;
+}
+
+form button:hover {
+  background-color: #fff;
+}
+
+/* Zusätzliche Innenabstände in der Box */
+#newsletter form {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+footer {
+  background-color: #2a0000;
+  color: #C8B568;
+  padding: 40px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+footer .footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+footer .footer-column a {
+  text-decoration: none;
+  color: #C8B568;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+footer .footer-column a:hover {
+  color: #F5F5DC;
+}
+footer .footer-copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 1px solid #F5F5DC;
+  padding-top: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.newsletter-form input[type=email] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+.newsletter-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.newsletter-form button:hover {
+  background-color: #555;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.newsletter-form input[type=email] {
+  padding: 0.5rem;
+  border: 1px solid #C8B568;
+  border-radius: 4px;
+  flex: 1;
+}
+.newsletter-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4b0000;
+  color: #F5F5DC;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.newsletter-form button:hover {
+  background-color: #C8B568;
+  color: #F5F5DC;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .navbar .navbar-left {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar .navbar-center,
+  .navbar .navbar-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navbar .navbar-center a,
+  .navbar .navbar-right a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .navbar .navbar-center a:hover,
+  .navbar .navbar-right a:hover {
+    color: #F5F5DC;
+    background-color: #2a0000;
+  }
+  .versand {
+    background-color: white;
+    color: #C8B568;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: block;
+  }
+  .versand .ver-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  .versand .ver-column h3 {
+    font-size: 18px;
+    text-align: center;
+    margin: 5px;
+  }
+  .versand .ver-column p {
+    font-size: 15px;
+    margin: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .versand .ver-column .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #weingut {
+    display: block;
+    align-items: center;
+  }
+  #weingut img {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #weingut img:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .weingut-img {
+    width: 100%;
+    text-align: center;
+  }
+  .weingut-art {
+    width: 100%;
+  }
+  .weingut-art h2 {
+    text-align: center;
+  }
+  .weingut-art p {
+    text-align: center;
+    margin-right: 7px;
+  }
+  .footer-column {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-column h4 {
+    margin-bottom: 10px;
+  }
+  .footer-copyright {
+    margin-top: 30px;
+  }
+}
