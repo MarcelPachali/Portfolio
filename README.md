@@ -3,6 +3,7 @@ Portfolio [Ordner]
 - Flip-Karte
 - ToDoListe
 - Weingut-Projekt
+- Cyber Gothic Landingpage
 
 Games [Ordner]
 - cube-run
