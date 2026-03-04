@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Retro Snake CGA — Classic Browsergame von Velgandr</title>
+<link rel="stylesheet" href="styles/style.css">
+
+<!-- SEO Meta Description -->
+<meta name="description" content="Spiele Retro Snake im originalen CGA-Look direkt im Browser! Kostenloses Browsergame mit Nostalgie, Highscore und Retro-Grafik.">
+<!-- Keywords für SEO -->
+<meta name="keywords" content="Retro Snake, Snake Spiel, Browsergame kostenlos, CGA, Retro Games, Velgandr, Snake im Browser, Retro Gaming">
+
+<!-- Author & Publisher -->
+<meta name="author" content="Velgandr">
+<meta name="publisher" content="Velgandr">
+<link rel="shortcut icon" href="../../images/MPIcon.ico" type="image/x-icon">
+
+<!-- Open Graph (Social Media Preview) -->
+<meta property="og:title" content="Retro Snake CGA — Classic Browsergame von Velgandr">
+<meta property="og:description" content="Spiele Retro Snake im originalen CGA-Look direkt im Browser! Kostenloses Browsergame mit Nostalgie, Highscore und Retro-Grafik.">
+<meta property="og:type" content="game">
+<meta property="og:url" content="https://deine-seite.de/snake_cga.html">
+<meta property="og:image" content="https://deine-seite.de/images/snake-cga-preview.png">
+<meta property="og:site_name" content="Velgandr Retro Games">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Retro Snake CGA — Classic Browsergame von Velgandr">
+<meta name="twitter:description" content="Spiele Retro Snake im originalen CGA-Look direkt im Browser! Kostenloses Browsergame mit Nostalgie, Highscore und Retro-Grafik.">
+<meta name="twitter:image" content="https://deine-seite.de/images/snake-cga-preview.png">
+<meta name="twitter:site" content="@Velgandr">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4JCXNQ3DR6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4JCXNQ3DR6');
+</script>
+</head>
+
+<body>
+<div class="container">
+  <h2>Snake — CGA Style <span style="font-size:14px;color:#9ad">Velgandr</span></h2>
+  <canvas id="game" width="320" height="200">
+    <p>Hier soll ein Snake Spiel angezeigt werden, 
+    das in einen alten CGA Design angezeigt werden sollte.</p>
+  </canvas>
+  <div class="hud">
+    <div>Score: <strong id="score">0</strong></div>
+    <div>Length: <strong id="length">1</strong></div>
+    <div id="status" class="muted">Status: Ready</div>
+    <div style="margin-left:8px">
+      Palette:
+      <span id="palettePreview"></span>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="startBtn">Start / Restart</button>
+    <button id="pauseBtn">Pause</button>
+    <label style="margin-left:12px">Scale:
+      <select id="scaleSelect">
+        <option value="2">2x</option>
+        <option value="3" selected>3x</option>
+        <option value="4">4x</option>
+        <option value="5">5x</option>
+      </select>
+    </label>
+    <label style="margin-left:12px">Mode:
+      <select id="modeSelect">
+        <option value="cga">CGA (320x200, 4 Farben)</option>
+        <option value="mono">Monochrom (640x200)</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="info">
+    Steuerung: Pfeiltasten oder WASD. <strong>Space</strong> zum Pausieren. Ziel: So lange wie möglich wachsen. <br>
+    Dieses Spiel simuliert das CGA-Look & Feel: reduzierte Auflösung, strikte Farbpalette und klare Pixelästhetik.
+  </div>
+
+  <!-- Button zum Öffnen -->
+<button onclick="document.getElementById('game-info').style.display='block';"
+  style="position:fixed;bottom:20px;left:20px;z-index:9999;
+  background:#111;color:#fff;border:none;padding:10px 16px;
+  border-radius:8px;cursor:pointer;font-size:14px;">
+  Retro Snake Info 🐍
+</button>
+
+<!-- Info-Beitrag -->
+<div id="game-info" style="display:none;max-width:620px;padding:20px;background:#fff;color:#222;
+border-radius:12px;box-shadow:0 0 18px rgba(0,0,0,0.4);font-family:sans-serif;
+position:fixed;bottom:20px;right:20px;z-index:10000;line-height:1.5;font-size:15px;">
+
+  <h2 style="margin-top:0;font-size:22px;color:#333;">Retro Snake im CGA-Stil 🎮</h2>
+  
+  <p>
+    Willkommen bei <strong>Retro Snake</strong> – einer modernen Umsetzung des 
+    klassischen Snake-Spiels im legendären <strong>CGA-Retro-Look</strong>. 
+    Dieses kostenlose Browsergame kombiniert den Nostalgie-Faktor der 
+    80er-Jahre mit einer einfachen, schnellen und unterhaltsamen Spielerfahrung. 
+    Du steuerst die Schlange mit den Pfeiltasten oder der WASD-Tastatursteuerung 
+    und versuchst, so viele Äpfel wie möglich zu sammeln. 
+    Jedes aufgenommene Objekt verlängert die Schlange, erhöht deine Punktzahl 
+    und steigert den Schwierigkeitsgrad.
+  </p>
+
+  <p>
+    Der Look basiert auf der originalen CGA-Farbpalette: Schwarz, Cyan, Magenta 
+    und Weiß. Die Auflösung beträgt 320x200 Pixel, was den unverwechselbaren 
+    Retro-Charme alter PC-Klassiker vermittelt. Bitte beachte: Dieses Spiel ist 
+    nur **vom CGA-Stil inspiriert**. Die Logik wurde eigenständig umgesetzt und 
+    entspricht nicht exakt allen Original-CGA-Verhaltensweisen – bestimmte 
+    Funktionen oder Einschränkungen fehlen bewusst, um das Spiel leichter 
+    spielbar zu machen.
+  </p>
+
+  <p>
+    💾 <strong>Features:</strong> Nostalgischer CGA-Look, responsive Steuerung, 
+    Highscore-System und endloser Spielspaß. Perfekt für kurze Pausen oder 
+    längere Sessions. Keine Installation erforderlich – das Spiel läuft direkt 
+    im Browser.
+  </p>
+
+  <!-- AdSense Platzhalter -->
+  <div style="margin:15px 0;">
+      <p>Werbeanzeige wird hier angezeigt!</p>
+  </div>
+
+  <button onclick="document.getElementById('game-info').style.display='none';" 
+    style="background:#222;color:#fff;border:none;padding:8px 14px;
+    border-radius:6px;cursor:pointer;">
+    Schließen ✖
+  </button>
+</div>
+
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+</div>
+
+<script src="js/game.js"></script>
+</body>
+</html>

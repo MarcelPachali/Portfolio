@@ -1,0 +1,495 @@
+$bgcolor: #4b0000;
+$color1: #C8B568;
+$accent2: #000000;
+$accent: #2a0000;
+$creme: #F5F5DC;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $bgcolor;
+    color: $color1;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
+
+// Cursor Projekt
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;              // Kreisgröße anpassen
+    height: 70px;
+    background-color: rgba(200, 181, 104, 0.3);  // Transparenter, farbiger Kreis
+    border-radius: 50%;
+    pointer-events: none;     // Mausereignisse ignorieren
+    z-index: 0;               // Darunter sollen andere Inhalte liegen
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;  // Optional: sanfter Übergang beim Hover-Effekt
+}
+
+// Header Bereich
+header {
+    background-color: $accent;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: $accent;
+
+    .navbar-left {
+        display: flex;
+        justify-content: flex-start;
+        img {
+            max-height: 50px;
+        }
+    }
+
+    .navbar-center {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .navbar-right {
+        display: flex;
+        gap: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color1;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s;
+        &:hover {
+            color: $creme;
+        }
+    }
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .modal-content {
+    background: $bgcolor;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .modal-h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .modal-p, address {
+    margin-bottom: 15px;
+  }
+
+// Main Bereich
+main {
+    margin: 15px;
+    section {
+        margin-bottom: 15px;
+        h1 {
+            font-size: 35px;
+            font-weight: 900;
+            text-align: center;
+        }
+        h2 {
+            font-size: 25px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+
+#sortiment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card-h2 {
+        display: block;
+        width: 100%;
+    }
+
+    .card {
+        display: block;
+        background-color: $creme;
+        width: 250px;
+        height: 525px;
+        margin-bottom: 15px;
+        padding: 5px;
+        .wein {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+        }
+        &:hover {
+            background-color: rgba(0, 0%, 0%, 0.2);
+            box-shadow: 10px 8px 10px #C8B568;
+        }
+    }
+}
+
+.versand {
+    background-color: white;
+    color: $color1;
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    display: flex;
+
+    .ver-column {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+        h3 {
+            font-size: 18px;
+            text-align: center;
+            margin: 5px;
+        }
+        p {
+            font-size: 15px;
+            margin: 15px;
+        }
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+#weingut {
+    display: flex;
+    align-items: center;
+    img {
+        width: 250px;
+        height: auto;
+        &:hover {
+            z-index: 1;
+            background-color: rgba(0, 0%, 0%, 0.2);
+        }
+    }
+}
+
+.weingut-img {
+    width: 30%;
+    text-align: center;
+}
+
+.weingut-art {
+    width: 70%;
+    padding: 20px;
+}
+
+/* Container für das Popup */
+#newsletter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 15px;
+    background: #4b0000; /* Hintergrundfarbe */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: #C8B568; /* Schriftfarbe */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  /* Animation: Box gleitet nach unten und wird transparent */
+  .slideOut {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  /* Stil für den Schließ-Button */
+  .close {
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    color: #C8B568;
+  }
+  .close:hover {
+    color: #fff;
+  }
+  
+  /* Formular-Stile anpassen */
+  form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    padding: 8px 12px;
+    background-color: #C8B568;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #4b0000;
+  }
+  form button:hover {
+    background-color: #fff;
+  }
+  
+  /* Zusätzliche Innenabstände in der Box */
+  #newsletter form {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+// Footer Bereich
+footer {
+    background-color: $accent;
+    color: $color1;
+    padding: 40px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .footer-column {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color1;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $creme;
+            }
+        }
+    }
+
+    // Copyright Zeile
+    .footer-copyright {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        border-top: 1px solid $creme;
+        padding-top: 10px;
+    }
+}
+
+// Newsletter
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+  
+    input[type="email"] {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      flex: 1; // Damit das Eingabefeld den verfügbaren Platz einnimmt
+    }
+  
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #555;
+      }
+    }
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+  
+    input[type="email"] {
+      padding: 0.5rem;
+      border: 1px solid #C8B568;
+      border-radius: 4px;
+      flex: 1;
+    }
+  
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: $bgcolor;
+      color: $creme;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: $color1;
+        color: $creme;
+      }
+    }
+} 
+
+//Media Query für kleinere Bildschirme
+@media (max-width: 768px) {
+    //Header Bereich
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        .navbar-left {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .navbar-center, 
+        .navbar-right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+            gap: 10px;
+
+            a {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+
+                &:hover {
+                    color: $creme;
+                    background-color: $accent;
+                }
+            }
+        }
+    }
+
+    // Main Bereich
+    .versand {
+        background-color: white;
+        color: $color1;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: block;
+    
+        .ver-column {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            h3 {
+                font-size: 18px;
+                text-align: center;
+                margin: 5px;
+            }
+            p {
+                font-size: 15px;
+                margin: 15px;
+                padding-bottom: 5px;
+                text-align: center;
+            }
+            .img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    #weingut {
+        display: block;
+        align-items: center;  
+        img {
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            &:hover {
+                background-color: rgba(0, 0%, 0%, 0.2);
+            }
+        }
+    }
+    
+    .weingut-img {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .weingut-art {
+        width: 100%;
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            margin-right: 7px;
+        }
+    }
+
+    // Footer Bereich
+    .footer-column {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 20px;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer-copyright {
+        margin-top: 30px;
+    }
+}

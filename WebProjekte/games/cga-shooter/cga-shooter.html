@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGA Weltraum-Shooter</title>
+    <meta name="description" content="Der Weltraum, unentliche Weiten... und nun hast du hier 
+    ein Spiel, mit einem CGA Design und ein minimalistischen Aufbau.">
+    <meta name="keywords" content="CGA, Weltraum-Shooter, Shooter, Weltraum, Spiel, Game, 
+    CGA Design, Pixelart, Pixel Game, Indie Game">
+    <link rel="stylesheet" href="styles/cga-style.css">
+    <link rel="shortcut icon" href="../../images/MPIcon.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4JCXNQ3DR6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4JCXNQ3DR6');
+</script>
+</head>
+<body>
+
+    <div class="game-controls">
+        <div id="score-display">Punkte: 0</div>
+        <!-- NEUER BUTTON FÜR STEUERUNG -->
+        <button id="controls-button" class="control-button">Steuerung</button>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- Spiel-Overlay für Start und Game Over -->
+    <div id="game-overlay" class="overlay">
+        <h1 id="overlay-title">CGA SPACE WAR</h1>
+        <p id="overlay-text">RETRO-MODUS AKTIVIERT.</p>
+        <button id="start-button">Spiel Starten</button>
+        <p style="color: #55FFFF; margin-top: 20px;">[Steuerung jederzeit über den Button oben rechts aufrufbar]</p>
+    </div>
+
+    <!-- NEUES MODAL FÜR STEUERUNG -->
+    <div id="controls-modal">
+        <div class="modal-content">
+            <h2>Steuerungsinformationen</h2>
+            <ul>
+                <!-- Verbesserte Platzierung und Beschreibung -->
+                <li><span class="key">A / &larr;</span> <span class="description">Bewegen nach Links</span></li>
+                <li><span class="key">D / &rarr;</span> <span class="description">Bewegen nach Rechts</span></li>
+                <li><span class="key">Leertaste</span> <span class="description">Feuern / Schießen</span></li>
+                <!-- NEU: Pause-Funktion hinzugefügt -->
+                <li><span class="key">P</span> <span class="description">Spiel PAUSIEREN/Fortsetzen</span></li>
+            </ul>
+            <button id="close-modal-button" class="control-button" style="margin-top: 20px;">SCHLIESSEN</button>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>    
