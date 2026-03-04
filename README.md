@@ -9,3 +9,6 @@ Games [Ordner]
 - cube-run
 - cga-snake (CGA Design Fokus)
 - cga-shooter (CGA Design Fokus)
+
+# C#-Projekte
+- Aktuell sind noch Software Projekte in Planung
